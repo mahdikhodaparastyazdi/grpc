@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package routeGuide;
+
+option go_package = "buffer_protocol/grpc_main/routeGuide";
+
+
+service RouteGuide {
+  rpc add(detail) returns (respond) {}
+  rpc get(temp) returns (getOrders) {}
+}
+
+message detail{
+  string  name = 1;
+}
+
+message respond{
+  bool res=1;
+}
+
+message temp{
+
+}
+
+message getOrders {
+  string orders = 1;
+}
